@@ -2,6 +2,7 @@
   position: fixed;
   background-color: #0e8017;
   height: 50px;
+  z-index: 99;
 }
 .navHolder .icon img {
   display: block;
@@ -192,6 +193,98 @@ footer p {
   text-decoration: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 30px;
+}
+
+.avatarContent {
+  padding-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.avatarContent .avatar-wrap {
+  display: flex;
+  margin-bottom: 50px;
+}
+.avatarContent .avatar-wrap .avatar-text1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 240px;
+  width: 500px;
+  padding: 30px;
+  background-color: rgb(27, 122, 39);
+}
+.avatarContent .avatar-wrap .avatar-text1 p {
+  color: white;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.avatarContent .avatar-wrap .avatar-img img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1100px) {
+  .avatarContent .avatar-wrap .avatar-img img {
+    width: 300px;
+  }
+  .avatarContent .avatar-wrap .avatar-text1 {
+    width: 300px;
+  }
+  .avatarContent .avatar-wrap .avatar-text1 p {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 715px) {
+  .avatarContent .avatar-wrap .avatar-img img {
+    width: 200px;
+  }
+  .avatarContent .avatar-wrap .avatar-img #moveATad {
+    object-position: -200px 0;
+  }
+  .avatarContent .avatar-wrap .avatar-text1 {
+    width: 200px;
+  }
+  .avatarContent .avatar-wrap .avatar-text1 p {
+    font-size: 22px;
+  }
+}
+.homeContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+}
+.homeContent .homeParagraph {
+  max-width: 800px;
+  min-height: 200px;
+}
+.homeContent .homeParagraph p {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@media screen and (max-width: 975px) {
+  .homeContent .homeImage img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 630px) {
+  .homeContent .homeImage img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
