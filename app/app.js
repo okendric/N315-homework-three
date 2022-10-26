@@ -3,18 +3,35 @@ function changeRoute(){
     let pageID = hashTag.replace("#", "");
     //console.log(hashTag + " " + pageID);
 
+
     if (pageID != "") {
        $.get(`pages/${pageID}/${pageID}.html`, function(data){
         //console.log("data " + data);
+
         $("#app").html(data);
+ 
+        $(".button").click(function(e) {
+            let buttonID = e.currentTarget.id;
+            alert("The name of the button is:  " + buttonID);
+            console.log("The name of the button is: " + buttonID);
+        })
+
         });
+
     } else {
         $.get(`pages/home/home.html`, function(data){
             //console.log("data " + data);
             $("#app").html(data);
+
+            $(".button").click(function(e) {
+                let buttonID = e.currentTarget.id;
+                alert("The name of the button is:  " + buttonID);
+                console.log("The name of the button is: " + buttonID);
+            })
+
             });
     }
-    
+
 }
 
 
@@ -32,8 +49,8 @@ function initListeners() {
 
     $(".button").click(function(e) {
         let buttonID = e.currentTarget.id;
-        clicked_id(e);
-    // console.log(e);
+        alert("The name of the button is:  " + buttonID);
+        console.log("The name of the button is: " + buttonID);
     })
     
 
@@ -42,9 +59,6 @@ function initListeners() {
 
 }
 
-export function clicked_id(clicked) {
-    alert(clicked);
-}
 
 $(document).ready(function() {
     initListeners();
